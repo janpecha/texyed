@@ -47,13 +47,16 @@
 	<script type="text/javascript" src="texyed/js/texyed.core.js"></script>
 	<script type="text/javascript" src="texyed/js/texyed.lorem-ipsum.js"></script>
 	<script type="text/javascript" src="texyed/js/texyed.windows.js"></script>
+	<script type="text/javascript" src="texyed/js/texyed.tab.js"></script>
 	
 	<script type="text/javascript">
 		$('#mytextarea').texyed()
 			.teLoremIpsum()
+			.teTab()
 			.teAddWindow('testWindow', 'Hello world!', '<h1>Big boss photo viewer!</h1>')
 			.teAddWindow('filemanager', 'File Manager', '<h1>Loading... Please wait.</h1>')
-			.teShowWindow('filemanager');
+			;
+			//.teShowWindow('filemanager');
 	</script>
 </body>
 </html>
