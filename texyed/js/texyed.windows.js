@@ -12,7 +12,7 @@
 				this.before('<div class="ui-window" data-texyed-window="' + name + '">'
 					+ '<div class="ui-title">'
 						+ title
-						+ ' <span class="ui-close">&#10006;</span>'
+						+ ' <span class="ui-close" title="Close this window">&#10006;</span>'
 					+ '</div>'
 					+ '<div class="ui-content">'
 					+ content
