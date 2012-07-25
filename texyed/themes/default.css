@@ -1,0 +1,83 @@
+/** Texyed - default themes
+ * @author		Jan Pecha, <janpecha@email.cz>
+ * @version		2012-07-25-1
+ */
+
+@import url('ui.buttons.css');	/* TODO: add .texyed class */
+
+.texyed-textarea {
+	padding: 1em;
+	border: 1px solid #ddd;
+	background: #fbfbfb;
+	line-height: 1.5em;
+	display: block;
+	font-family: Arial, sans-serif;
+	font-size: 105% !important;
+/*	box-shadow: -1px -1px 2px 3px #ccc;*/
+/*	-webkit-box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.6);*/
+/*	-moz-box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.6);*/
+	box-shadow: inset 0px 0px 5px 3px rgba(240, 240, 240, 1);
+/*	margin: 0 !important;*/
+}
+
+.texyed {
+	background: red;
+	position: relative;
+	margin-bottom: 1em;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Buttons - see file ui.buttons.css */
+
+/* Windows */
+.texyed .ui-window {
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background: rgba(30,30,30,0.9);
+	color: #fff;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+}
+
+.texyed .ui-window .ui-title {
+	background: inherit;
+	padding: 0.4em 0.8em 0.1em;
+	color: #ddd;
+	font-weight: bold;
+	position: relative;
+	top: 0;
+	left: 0;
+	border-bottom: 1px solid #000;
+/*	font-size: 90%;*/
+}
+
+.texyed .ui-window .ui-close {
+	font-weight: bold;
+	position: absolute;
+	right: 0.6em;
+	top: 0.45em;
+	display: block;
+	line-height: 1em;
+	overflow: hidden;
+	vertical-align: middle;
+	padding: 0.2em 0.2em 0.1em 0.2em;
+}
+
+.texyed .ui-window .ui-close:hover {
+	background: #444;
+	cursor: pointer;
+}
+
+.texyed .ui-window .ui-content {
+	padding: 1em;
+	overflow: auto;	
+}
+.texyed .ui-window.ui-show {
+	display: block;
+}
+

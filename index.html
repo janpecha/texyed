@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	
+	<meta name="description" content="description">
+	<meta name="keywords" content="keywords">
+	<meta name="author" content="Jan Pecha, http://janpecha.iunas.cz/">
+	<meta name="viewport" content="width=device-width">
+	<!-- <meta n:ifset="$robots" name="robots" content="{$robots}noindex, nofollow | index, follow | all"> -->
+	
+	<link rel="stylesheet" href="http://localhost/typro/typro.reset.css" type="text/css">
+	<link rel="stylesheet" href="http://localhost/typro/typro.default.css" type="text/css">
+	
+	<link rel="stylesheet" media="screen,projection,tv" href="texyed/themes/default.css" type="text/css">
+	<!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="desktop.css"><![endif]-->
+	
+	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+	
+	<style type="text/css">
+		#wrapper {
+			max-width: 1024px;
+			margin-left: auto;
+			margin-right: auto;
+			padding-top: 2em;
+		}
+		
+		#mytextarea {
+			margin-left: auto;
+			margin-right: auto;
+			font-size: 90%;
+			margin: 10px auto;
+		}
+	</style>
+	
+	<title>Texyed</title>
+</head>
+<body>
+	<div id="wrapper">
+		<h1>Texyed <small>super text editor</small></h1>
+		<textarea id="mytextarea" name="text" cols="80" rows="20" placeholder="Article text..."></textarea>
+		<a href="#" class="ui-button ui-ok">Save</a>
+		<a href="#" class="ui-button ui-delete">Cancel</a>
+	</div>
+	
+	<script type="text/javascript" src="texyed/zepto.js"></script>
+	<script type="text/javascript" src="texyed/js/texyed.core.js"></script>
+	<script type="text/javascript" src="texyed/js/texyed.lorem-ipsum.js"></script>
+	<script type="text/javascript" src="texyed/js/texyed.windows.js"></script>
+	
+	<script type="text/javascript">
+		$('#mytextarea').texyed()
+			.teLoremIpsum()
+			.teAddWindow('testWindow', 'Hello world!', '<h1>Big boss photo viewer!</h1>')
+			.teShowWindow('testWindow');
+	</script>
+</body>
+</html>
