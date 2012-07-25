@@ -11,9 +11,9 @@
 	/** Buttons - a, span, submit button, button
 		based on http://hellohappy.org/css3-buttons/
 	*/
-	a.ui-button, span.ui-button,
-	input[type=submit].ui-button, input[type=reset].ui-button,
-	input[type=button].ui-button, button.ui-button {
+	.texyed a.ui-button, .texyed span.ui-button,
+	.texyed input[type=submit].ui-button, .texyed input[type=reset].ui-button,
+	.texyed input[type=button].ui-button, .texyed button.ui-button {
 		display: inline;
 		display: inline-block;
 		text-decoration: none;
@@ -46,9 +46,9 @@
 	}
 	
 	
-	a.ui-button:hover, span.ui-button:hover,
-	input[type=submit].ui-button:hover, input[type=reset].ui-button:hover,
-	input[type=button].ui-button:hover, button.ui-button:hover {
+	.texyed a.ui-button:hover, .texyed span.ui-button:hover,
+	.texyed input[type=submit].ui-button:hover, .texyed input[type=reset].ui-button:hover,
+	.texyed input[type=button].ui-button:hover, .texyed button.ui-button:hover {
 		background: #d9d9d9;
 		-webkit-box-shadow: inset 0 0 1px 1px #eaeaea;
 		-moz-box-shadow: inset 0 0 1px 1px #eaeaea;
@@ -58,9 +58,9 @@
 	}
 	
 	
-	a.ui-button:active, span.ui-button:active,
-	input[type=submit].ui-button:active, input[type=reset].ui-button:active,
-	input[type=button].ui-button:active, button.ui-button:active {
+	.texyed a.ui-button:active, .texyed span.ui-button:active,
+	.texyed input[type=submit].ui-button:active, .texyed input[type=reset].ui-button:active,
+	.texyed input[type=button].ui-button:active, .texyed button.ui-button:active {
 		background: #d0d0d0;
 		-webkit-box-shadow: inset 0 0 1px 1px #e3e3e3;
 		-moz-box-shadow: inset 0 0 1px 1px #e3e3e3;
@@ -72,9 +72,9 @@
 	
 	
 	/* OK button */
-	a.ui-button.ui-ok, span.ui-button.ui-ok,
-	input[type=submit].ui-button.ui-ok, input[type=reset].ui-button.ui-ok,
-	input[type=button].ui-button.ui-ok, button.ui-button.ui-ok {
+	.texyed a.ui-button.ui-ok, .texyed span.ui-button.ui-ok,
+	.texyed input[type=submit].ui-button.ui-ok, .texyed input[type=reset].ui-button.ui-ok,
+	.texyed input[type=button].ui-button.ui-ok, .texyed button.ui-button.ui-ok {
 		background: #60ac55;
 		border-color: #3d9131;
 		-webkit-box-shadow: inset 0 0 1px 1px #96ca6d;
@@ -85,9 +85,9 @@
 	}
 	
 	
-	a.ui-button.ui-ok:hover, span.ui-button.ui-ok:hover,
-	input[type=submit].ui-button.ui-ok:hover, input[type=reset].ui-button.ui-ok:hover,
-	input[type=button].ui-button.ui-ok:hover, button.ui-button.ui-ok:hover {
+	.texyed a.ui-button.ui-ok:hover, .texyed span.ui-button.ui-ok:hover,
+	.texyed input[type=submit].ui-button.ui-ok:hover, .texyed input[type=reset].ui-button.ui-ok:hover,
+	.texyed input[type=button].ui-button.ui-ok:hover, .texyed button.ui-button.ui-ok:hover {
 		background: #56a24b;
 		-webkit-box-shadow: inset 0 0 1px 1px #8ec367;
 		-moz-box-shadow: inset 0 0 1px 1px #8ec367;
@@ -96,9 +96,9 @@
 	}
 	
 	
-	a.ui-button.ui-ok:active, span.ui-button.ui-ok:active,
-	input[type=submit].ui-button.ui-ok:active, input[type=reset].ui-button.ui-ok:active,
-	input[type=button].ui-button.ui-ok:active, button.ui-button.ui-ok:active {
+	.texyed a.ui-button.ui-ok:active, .texyed span.ui-button.ui-ok:active,
+	.texyed input[type=submit].ui-button.ui-ok:active, .texyed input[type=reset].ui-button.ui-ok:active,
+	.texyed input[type=button].ui-button.ui-ok:active, .texyed button.ui-button.ui-ok:active {
 		background: #4d9941;
 		-webkit-box-shadow: inset 0 0 1px 1px #87bc60;
 		-moz-box-shadow: inset 0 0 1px 1px #87bc60;
@@ -109,9 +109,9 @@
 	
 	
 	/* delete button */
-	a.ui-button.ui-delete, span.ui-button.ui-delete,
-	input[type=submit].ui-button.ui-delete, input[type=reset].ui-button.ui-delete,
-	input[type=button].ui-button.ui-delete, button.ui-button.ui-delete {
+	.texyed a.ui-button.ui-delete, .texyed span.ui-button.ui-delete,
+	.texyed input[type=submit].ui-button.ui-delete, .texyed input[type=reset].ui-button.ui-delete,
+	.texyed input[type=button].ui-button.ui-delete, .texyed button.ui-button.ui-delete {
 		background: #b43535;
 		border-color: #913131;
 		-webkit-box-shadow: inset 0 0 1px 1px #ca6d6d;
@@ -122,9 +122,9 @@
 	}
 	
 	
-	a.ui-button.ui-delete:hover, span.ui-button.ui-delete:hover,
-	input[type=submit].ui-button.ui-delete:hover, input[type=reset].ui-button.ui-delete:hover,
-	input[type=button].ui-button.ui-delete:hover, button.ui-button.ui-delete:hover {
+	.texyed a.ui-button.ui-delete:hover, .texyed span.ui-button.ui-delete:hover,
+	.texyed input[type=submit].ui-button.ui-delete:hover, .texyed input[type=reset].ui-button.ui-delete:hover,
+	.texyed input[type=button].ui-button.ui-delete:hover, .texyed button.ui-button.ui-delete:hover {
 		background: #9d2e2e;
 		-webkit-box-shadow: inset 0 0 1px 1px #c36767;
 		-moz-box-shadow: inset 0 0 1px 1px #c36767;
@@ -133,9 +133,9 @@
 	}
 	
 	
-	a.ui-button.ui-delete:active, span.ui-button.ui-delete:active,
-	input[type=submit].ui-button.ui-delete:active, input[type=reset].ui-button.ui-delete:active,
-	input[type=button].ui-button.ui-delete:active, button.ui-button.ui-delete:active {
+	.texyed a.ui-button.ui-delete:active, .texyed span.ui-button.ui-delete:active,
+	.texyed input[type=submit].ui-button.ui-delete:active, .texyed input[type=reset].ui-button.ui-delete:active,
+	.texyed input[type=button].ui-button.ui-delete:active, .texyed button.ui-button.ui-delete:active {
 		background: #9c3434;
 		-webkit-box-shadow: inset 0 0 1px 1px #bc6060;
 		-moz-box-shadow: inset 0 0 1px 1px #bc6060;
@@ -145,27 +145,27 @@
 /*		top: 1px;*/
 	}
 	
-	.ui-button.ui-large,
-	input[type=submit].ui-button.ui-large,
-	input[type=reset].ui-button.ui-large,
-	input[type=button].ui-button.ui-large {
+	.texyed .ui-button.ui-large,
+	.texyed input[type=submit].ui-button.ui-large,
+	.texyed input[type=reset].ui-button.ui-large,
+	.texyed input[type=button].ui-button.ui-large {
 		font-size: 110%;
 	}
 	
-	.ui-button.ui-small,
-	input[type=submit].ui-button.ui-small,
-	input[type=reset].ui-button.ui-small,
-	input[type=button].ui-button.ui-small {
+	.texyed .ui-button.ui-small,
+	.texyed input[type=submit].ui-button.ui-small,
+	.texyed input[type=reset].ui-button.ui-small,
+	.texyed input[type=button].ui-button.ui-small {
 		font-size: 70%;
 	}
 	
 	
 	/** Button Group */
-	.ui-button-group {
+	.texyed .ui-button-group {
 		margin: 0.2em 0.2em 0.4em;
 	}
 	
-	.ui-button-group:after {
+	.texyed .ui-button-group:after {
 		content: ".";
 		display: block;
 		height: 0;
@@ -173,10 +173,10 @@
 		clear: both;
 	}
 	
-	.ui-button-group .ui-button,
-	.ui-button-group input[type=submit].ui-button,
-	.ui-button-group input[type=reset].ui-button,
-	.ui-button-group input[type=button].ui-button {
+	.texyed .ui-button-group .ui-button,
+	.texyed .ui-button-group input[type=submit].ui-button,
+	.texyed .ui-button-group input[type=reset].ui-button,
+	.texyed .ui-button-group input[type=button].ui-button {
 		margin: 0;
 		-webkit-border-radius: 0;
 		-moz-border-radius: 0;
@@ -184,10 +184,10 @@
 		float: left;
 	}
 	
-	.ui-button-group .ui-button:first-child,
-	.ui-button-group input[type=submit].ui-button:first-child,
-	.ui-button-group input[type=reset].ui-button:first-child,
-	.ui-button-group input[type=button].ui-button:first-child {
+	.texyed .ui-button-group .ui-button:first-child,
+	.texyed .ui-button-group input[type=submit].ui-button:first-child,
+	.texyed .ui-button-group input[type=reset].ui-button:first-child,
+	.texyed .ui-button-group input[type=button].ui-button:first-child {
 		-webkit-border-top-left-radius: 4px;
 		-webkit-border-bottom-left-radius: 4px;
 		-moz-border-radius-topleft: 4px;
@@ -196,10 +196,10 @@
 		border-bottom-left-radius: 4px;
 	}
 	
-	.ui-button-group .ui-button:last-child,
-	.ui-button-group input[type=submit].ui-button:last-child,
-	.ui-button-group input[type=reset].ui-button:last-child,
-	.ui-button-group input[type=button].ui-button:last-child {
+	.texyed .ui-button-group .ui-button:last-child,
+	.texyed .ui-button-group input[type=submit].ui-button:last-child,
+	.texyed .ui-button-group input[type=reset].ui-button:last-child,
+	.texyed .ui-button-group input[type=button].ui-button:last-child {
 		-webkit-border-top-right-radius: 4px;
 		-webkit-border-bottom-right-radius: 4px;
 		-moz-border-radius-topright: 4px;

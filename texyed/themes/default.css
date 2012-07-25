@@ -3,7 +3,7 @@
  * @version		2012-07-25-1
  */
 
-@import url('ui.buttons.css');	/* TODO: add .texyed class */
+@import url('ui.buttons.css');
 
 .texyed-textarea {
 	padding: 1em;
