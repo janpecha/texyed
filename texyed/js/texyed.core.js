@@ -16,7 +16,7 @@
 				var texyed = this.parent();
 				// Size
 				texyed.width(this.width());
-//				//texyed.height(this.height());
+				//texyed.height(this.height());
 
 				// Margins
 				texyed.css({
@@ -29,7 +29,6 @@
 					'margin-top': 0,
 					'margin-bottom': 0
 				});
-//				alert(this.parent().attr('class'));
 			}
 			
 			return this;
