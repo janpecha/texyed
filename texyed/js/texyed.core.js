@@ -33,6 +33,19 @@
 			}
 			
 			return this;
+		},
+		
+		// DRAFT: !!!
+		texyedLang: {
+			close: 'Close',
+			closeWindow: 'Close this window',
+		},
+		
+		teLangCz: function() {
+			$.fn.texyedLang = {
+				close: 'Zavřít',
+				closeWindow: 'Zavřít toto okno',
+			};
 		}
 	})
 })(Zepto);
