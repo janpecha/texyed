@@ -11,7 +11,6 @@
 		teAutogrow: function() {
 			if((this.hasClass('texyed-textarea')))
 			{
-				//this.data('texyed-autogrow-min', this.height());
 				this.css('min-height', this.height() - parseInt(this.css('padding-top'), 10) - parseInt(this.css('padding-bottom'), 10));
 				this.on('focus', function(e) {
 					startExpand($(e.target));
@@ -22,7 +21,6 @@
 			
 			function startExpand(obj)
 			{
-//				obj.css('overflow-y', 'hidden');
 				$.fn.teAutogrow_lineHeight = parseInt(obj.css('line-height'), 10);
 				$.fn.teAutogrow_maxHeight = parseInt(obj.css('max-height'), 10);
 				
@@ -38,8 +36,6 @@
 			
 			function autogrowUpdate(obj)
 			{
-//				stopExpand();
-//				var o = obj.get(0);
 				var currentChars = obj.val().length;
 				
 				if($.fn.teAutogrow_lastChars == undefined)
@@ -118,27 +114,6 @@
 				}
 				
 				$.fn.teAutogrow_cumulativeCharDiff = 0;
-			
-////				alert(obj.height());
-////				alert(obj.attr('scrollHeight'));
-//				var borderSize = obj.attr('offsetHeight') - obj.attr('clientHeight');
-//				var currentHeight = obj.height() - borderSize;
-////				alert(currentHeight);
-////				alert(borderSize);
-////				stopExpand();
-//				if(obj.attr('scrollHeight') != currentHeight)
-//				{
-//					obj.animate({
-//						height: currentHeight + 'px'
-//					}, {
-//						duration: 50,
-//						easing: 'ease',
-//						complete: function() {
-//							obj.get(0).focus();
-//						}
-//					});
-////					obj.get(0).blur();
-//				}
 			}
 			
 			return this;
