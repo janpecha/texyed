@@ -1,6 +1,6 @@
-/** Texyed - Core module
+/** Texyed - Tab module
  * 
- * based on Tabby JQuery Plugins (http://teddevito.com/demos/textarea.html)
+ * based on Tabby JQuery Plugin (http://teddevito.com/demos/textarea.html)
  * 
  * @author		Jan Pecha, <janpecha@email.cz>
  * @version		2012-07-25-1
