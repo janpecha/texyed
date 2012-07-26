@@ -4,6 +4,7 @@
  * - $('#mytoolbar').teAddButton('Save', function() {...});
  * 
  * @author		Jan Pecha, <janpecha@email.cz>
+ * @license		see file license.txt
  * @version		2012-07-26-1
  */
 

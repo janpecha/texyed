@@ -3,6 +3,7 @@
  * based on Tabby JQuery Plugin (http://teddevito.com/demos/textarea.html)
  * 
  * @author		Jan Pecha, <janpecha@email.cz>
+ * @license		see file license.txt
  * @version		2012-07-25-1
  */
 

@@ -3,6 +3,7 @@
  * based on Autogrow JQuery Plugin (http://opensourcejavaphp.net/phpapps/vanilla/js/library/jquery.autogrow.js.html)
  * 
  * @author		Jan Pecha, <janpecha@email.cz>
+ * @license		see file license.txt
  * @version		2012-07-26-1
  */
 

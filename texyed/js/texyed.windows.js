@@ -1,6 +1,7 @@
 /** Texyed - Windows module
  * 
  * @author		Jan Pecha, <janpecha@email.cz>
+ * @license		see file license.txt
  * @version		2012-07-25-1
  */
 
