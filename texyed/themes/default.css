@@ -22,7 +22,7 @@
 }
 
 .texyed {
-	background: red;
+	background: #fff;
 	position: relative;
 	margin-bottom: 1em;
 	overflow: hidden;
@@ -80,5 +80,28 @@
 }
 .texyed .ui-window.ui-show {
 	display: block;
+}
+
+/* Toolbars */
+.texyed .ui-toolbar {
+/*	background: #eee;*/
+/*	border: 1px solid #ddd;*/
+/*	border-bottom-width: 0;*/
+	border: 1px solid #bbb;
+	background: #eee;
+}
+
+.texyed .ui-toolbar.ui-button-group {
+	margin: 0;
+}
+
+.texyed .ui-toolbar.ui-button-group .ui-button {
+	border-radius: 0;
+	border-top-width: 0;
+	border-bottom-width: 0;
+}
+
+.texyed .ui-toolbar.ui-button-group .ui-button:first-child {
+	border-left-width: 0;
 }
 

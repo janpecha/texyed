@@ -10,10 +10,18 @@
 
 ;(function($){
 	$.extend($.fn, {
-		teAddButton: function(title, handler) {
-			$('<span class="ui-button">' + title + '</span>')
+		teAddButton: function(title, handler, className) {
+			var classes = '';
+			
+			if(typeof className !== 'undefined')
+			{
+				classes = className;
+			}
+			
+			$('<span class="ui-button ' + classes + '">' + title + '</span>')
 				.on('click', handler)
 				.appendTo(this);
+			
 			
 			return this;
 		}

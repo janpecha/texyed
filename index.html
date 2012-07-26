@@ -48,21 +48,52 @@
 	<script type="text/javascript" src="texyed/js/texyed.lorem-ipsum.js"></script>
 	<script type="text/javascript" src="texyed/js/texyed.windows.js"></script>
 	<script type="text/javascript" src="texyed/js/texyed.buttons.js"></script>
+	<script type="text/javascript" src="texyed/js/texyed.toolbars.js"></script>
 	<script type="text/javascript" src="texyed/js/texyed.tab.js"></script>
 	<script type="text/javascript" src="texyed/js/texyed.autogrow.js"></script>
 	
 	<script type="text/javascript">
-		$('#mytextarea').texyed()
+		var texyed = $('#mytextarea').texyed()
 			.teLoremIpsum()
 			.teTab()
 			.teAutogrow()
+			.teAddToolbar('main')
+			.teAddAfterToolbar('buttonbar')
 			.teAddWindow('testWindow', 'Hello world!', '<h1>Big boss photo viewer!</h1>')
 			.teAddWindow('filemanager', 'File Manager', '<h1>Loading... Please wait.</h1>')
 			//.teShowWindow('filemanager')
-			.teGetWindow('filemanager').children('.ui-content')
-			.teAddButton('Save', function(){alert('Saving...');})
-			.teAddButton('Cancel', function(){alert('Canceling...');})
-			.teAddButton('Next', function(){alert('Go To Next!');})
+			//.teGetWindow('filemanager').children('.ui-content')
+			//.teAddButton('Save', function(){alert('Saving...');})
+			//.teAddButton('Cancel', function(){alert('Canceling...');})
+			//.teAddButton('Next', function(){alert('Go To Next!');})
+			;
+		
+		texyed.teGetToolbar('main')
+			.teAddButton('<strong>B</strong>', function() {
+				alert('Any action.');
+			})
+			
+			.teAddButton('<em>I</em>', function() {
+				alert('Any action.');
+			})
+			
+			.teAddButton('<u>url</u>', function() {
+				alert('Any action.');
+			})
+			
+			.teAddButton('Preview', function() {
+				texyed.teShowWindow('filemanager');
+			})
+			;
+		
+		texyed.teGetToolbar('buttonbar')
+			.teAddButton('<strong>Save</strong>', function() {
+				alert('Any saving action.');
+			}, 'ui-ok')
+			
+			.teAddButton('Cancel', function() {
+				alert('Any action.');
+			}, 'ui-delete')
 			;
 			//.teShowWindow('filemanager');
 	</script>
