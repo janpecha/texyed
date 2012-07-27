@@ -51,13 +51,15 @@
 	<script type="text/javascript" src="texyed/js/texyed.toolbars.js"></script>
 	<script type="text/javascript" src="texyed/js/texyed.tab.js"></script>
 	<script type="text/javascript" src="texyed/js/texyed.autogrow.js"></script>
+	<script type="text/javascript" src="texyed/js/texyed.simple-preview.js"></script>
 	
 	<script type="text/javascript">
 		var texyed = $('#mytextarea').texyed()
 			.teLoremIpsum()
 			.teTab()
-			.teAutogrow()
+			//.teAutogrow()
 			.teAddToolbar('main')
+			.tePreview('preview.php')
 			.teAddAfterToolbar('buttonbar')
 			.teAddWindow('testWindow', 'Hello world!', '<h1>Big boss photo viewer!</h1>')
 			.teAddWindow('filemanager', 'File Manager', '<h1>Loading... Please wait.</h1>')
@@ -84,6 +86,8 @@
 			.teAddButton('Preview', function() {
 				texyed.teShowWindow('filemanager');
 			})
+			
+			.teAddPreviewButton('Náhled')
 			;
 		
 		texyed.teGetToolbar('buttonbar')

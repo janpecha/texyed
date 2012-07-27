@@ -35,6 +35,14 @@
 			return this;
 		},
 		
+		teGetTexyed: function() {
+			return this.parents('.texyed').first();
+		},
+		
+		teGetTextarea: function() {
+			return this.teGetTexyed().children('.texyed-textarea').first();
+		},
+		
 		// DRAFT: !!!
 		texyedLang: {
 			close: 'Close',
