@@ -41,9 +41,17 @@
 		<textarea id="mytextarea" name="text" cols="80" rows="20" placeholder="Article text..."></textarea>
 		<a href="#" class="ui-button ui-ok">Save</a>
 		<a href="#" class="ui-button ui-delete">Cancel</a>
+		
+		<hr>
+		&copy; Jan Pecha, 2012 | <a href="http://github.com/janpecha/texyed/">Source code</a>
 	</div>
 	
-	<script type="text/javascript" src="texyed/zepto.js"></script>
+<!--	<script type="text/javascript" src="texyed/zepto.js"></script>-->
+	<script type="text/javascript">
+	document.write('<script src=texyed/' +
+		('__proto__' in {} ? 'zepto' : 'jquery') +
+	'.js><\/script>');
+	</script>
 	<script type="text/javascript" src="texyed/js/texyed.core.js"></script>
 	<script type="text/javascript" src="texyed/js/texyed.lorem-ipsum.js"></script>
 	<script type="text/javascript" src="texyed/js/texyed.windows.js"></script>
@@ -54,6 +62,7 @@
 	<script type="text/javascript" src="texyed/js/texyed.simple-preview.js"></script>
 	
 	<script type="text/javascript">
+		$('#wrapper').append('<p><em>Using <strong>'+('Zepto' in window ? 'Zepto' : 'jQuery')+'</strong> now.</em></p>');
 		var texyed = $('#mytextarea').texyed()
 			.teLoremIpsum()
 			.teTab()

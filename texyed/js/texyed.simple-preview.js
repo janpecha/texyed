@@ -2,7 +2,6 @@
  * 
  * Require:
  *	- Buttons module
- *  - 
  * 
  * @author		Jan Pecha, <janpecha@email.cz>
  * @license		see file license.txt
@@ -60,5 +59,5 @@
 		}
 	});
 
-})(Zepto);
+})(('Zepto' in window) ? Zepto : jQuery);
 

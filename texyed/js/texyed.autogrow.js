@@ -4,7 +4,7 @@
  * 
  * @author		Jan Pecha, <janpecha@email.cz>
  * @license		see file license.txt
- * @version		2012-07-26-1
+ * @version		2012-07-27-1
  */
 
 ;(function($){
@@ -126,5 +126,5 @@
 		teAutogrow_maxHeight: 0
 	});
 	
-})(Zepto);
+})(('Zepto' in window) ? Zepto : jQuery);
 

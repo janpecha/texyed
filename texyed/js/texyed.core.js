@@ -2,7 +2,7 @@
  * 
  * @author		Jan Pecha, <janpecha@email.cz>
  * @license		see file license.txt
- * @version		2012-07-25-1
+ * @version		2012-07-27-1
  */
 
 ;(function($){
@@ -16,7 +16,14 @@
 				// Copy style
 				var texyed = this.parent();
 				// Size
-				texyed.width(this.width());
+				if(typeof Zepto !== 'undefined')
+				{
+					texyed.width(this.width());
+				}
+				else
+				{
+					texyed.css('width', (this.get(0).offsetWidth + 'px'));
+				}
 				//texyed.height(this.height());
 
 				// Margins
@@ -56,5 +63,5 @@
 			};
 		}
 	})
-})(Zepto);
+})(('Zepto' in window) ? Zepto : jQuery);
 
