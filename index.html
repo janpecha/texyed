@@ -44,7 +44,7 @@
 		<a href="#" class="ui-button ui-delete">Cancel</a>
 		
 		<hr>
-		&copy; <a href="http://janpecha.iunas.cz/">Jan Pecha</a>, 2012 | <a href="http://github.com/janpecha/texyed/">Source code</a>
+		&copy; <a href="http://janpecha.iunas.cz/">Jan Pecha</a>, 2012 / <a href="http://github.com/janpecha/texyed/">Source code</a>
 	</div>
 	
 <!--	<script type="text/javascript" src="texyed/zepto.js"></script>-->
@@ -61,10 +61,12 @@
 	<script type="text/javascript" src="texyed/js/texyed.tab.js"></script>
 	<script type="text/javascript" src="texyed/js/texyed.autogrow.js"></script>
 	<script type="text/javascript" src="texyed/js/texyed.simple-preview.js"></script>
+	<script type="text/javascript" src="texyed/langs/lang.cz.js"></script>
 	
 	<script type="text/javascript">
 		$('#wrapper').append('<p><em>Using <strong>'+('Zepto' in window ? 'Zepto' : 'jQuery')+'</strong> now.</em></p>');
 		var texyed = $('#mytextarea').texyed()
+			.teLangCz()
 			.teLoremIpsum()
 			.teTab()
 			//.teAutogrow()

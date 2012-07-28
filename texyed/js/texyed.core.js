@@ -2,7 +2,7 @@
  * 
  * @author		Jan Pecha, <janpecha@email.cz>
  * @license		see file license.txt
- * @version		2012-07-27-1
+ * @version		2012-07-28-1
  */
 
 ;(function($){
@@ -50,17 +50,15 @@
 			return this.teGetTexyed().children('.texyed-textarea').first();
 		},
 		
-		// DRAFT: !!!
 		texyedLang: {
 			close: 'Close',
 			closeWindow: 'Close this window',
-		},
-		
-		teLangCz: function() {
-			$.fn.texyedLang = {
-				close: 'Zavřít',
-				closeWindow: 'Zavřít toto okno',
-			};
+			preview: 'Preview',
+			previewError: 'No preview available. May be a connection error or a server error.',
+			ok: 'OK',
+			cancel: 'Cancel',
+			save: 'Save',
+			saveAs: 'Save as'
 		}
 	})
 })(('Zepto' in window) ? Zepto : jQuery);

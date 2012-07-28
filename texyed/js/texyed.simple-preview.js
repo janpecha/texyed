@@ -5,7 +5,7 @@
  * 
  * @author		Jan Pecha, <janpecha@email.cz>
  * @license		see file license.txt
- * @version		2012-07-27-1
+ * @version		2012-07-28-1
  */
 
 ;(function($){
@@ -13,7 +13,7 @@
 		teSimplePreview: function(url) {
 			if((this.hasClass('texyed-textarea')))
 			{
-				this.teAddWindow('preview', 'Preview', '');
+				this.teAddWindow('preview', $.fn.texyedLang.preview/*'Preview'*/, '');
 				this.teGetWindow('preview')
 					.data('texyed-preview', url)
 					.data('texyed-preview-val', '');
@@ -43,7 +43,8 @@
 							mywindow.children('.ui-content').html(data);
 						},
 						error: function() {
-							alert('Fatal error! Any connection problem.');
+							//alert('Fatal error! Any connection problem.');
+							alert('Fatal error! ' + $.fn.texyedLang.previewError)
 							textarea.teCloseWindow('preview');
 						}
 					});

@@ -2,7 +2,7 @@
  * 
  * @author		Jan Pecha, <janpecha@email.cz>
  * @license		see file license.txt
- * @version		2012-07-27-1
+ * @version		2012-07-28-1
  */
 
 ;(function($){
@@ -13,7 +13,7 @@
 				this.before('<div class="ui-window" data-texyed-window="' + name + '">'
 					+ '<div class="ui-title">'
 						+ title
-						+ ' <span class="ui-close" title="Close this window">&#10006;</span>'
+						+ ' <span class="ui-close" title="' + $.fn.texyedLang.closeWindow/*Close this window*/ + '">&#10006;</span>'
 					+ '</div>'
 					+ '<div class="ui-content">'
 					+ content
