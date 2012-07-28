@@ -1,4 +1,4 @@
-/** Texyed - Preview module
+/** Texyed - Simple Preview module
  * 
  * Require:
  *	- Buttons module
@@ -10,7 +10,7 @@
 
 ;(function($){
 	$.extend($.fn, {
-		tePreview: function(url) {
+		teSimplePreview: function(url) {
 			if((this.hasClass('texyed-textarea')))
 			{
 				this.teAddWindow('preview', 'Preview', '');
