@@ -5,7 +5,7 @@
  * 
  * @author		Jan Pecha, <janpecha@email.cz>
  * @license		see file license.txt
- * @version		2012-07-28-1
+ * @version		2012-07-29-1
  */
 
 ;(function($){
@@ -13,8 +13,8 @@
 		teSimplePreview: function(url) {
 			if((this.hasClass('texyed-textarea')))
 			{
-				this.teAddWindow('preview', $.fn.texyedLang.preview/*'Preview'*/, '');
-				this.teGetWindow('preview')
+				this.teAddWindow('simple-preview', $.fn.texyedLang.preview/*'Preview'*/, '');
+				this.teGetWindow('simple-preview')
 					.data('texyed-preview', url)
 					.data('texyed-preview-val', '');
 			}
@@ -22,13 +22,13 @@
 			return this;
 		},
 		
-		teAddPreviewButton: function(title) {
+		teAddSimplePreviewButton: function(title) {
 			this.teAddButton(title, function(e) {
 				var textarea = $(this).teGetTextarea();
 				var textareaValue = textarea.val();
-				var mywindow = textarea.teGetWindow('preview');
+				var mywindow = textarea.teGetWindow('simple-preview');
 				
-				textarea.teShowWindow('preview');
+				textarea.teShowWindow('simple-preview');
 				
 				if(mywindow.data('texyed-preview-val') != textareaValue)
 				{
@@ -45,7 +45,7 @@
 						error: function() {
 							//alert('Fatal error! Any connection problem.');
 							alert('Fatal error! ' + $.fn.texyedLang.previewError)
-							textarea.teCloseWindow('preview');
+							textarea.teCloseWindow('simple-preview');
 						}
 					});
 //					$.post(mywindow.data('texyed-preview'), {
