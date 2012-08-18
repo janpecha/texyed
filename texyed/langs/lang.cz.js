@@ -2,7 +2,7 @@
  * 
  * @author		Jan Pecha, <janpecha@email.cz>
  * @license		see file license.txt
- * @version		2012-07-28-1
+ * @version		2012-08-18-1
  */
 
 ;(function($){
@@ -12,11 +12,14 @@
 				close: 'Zavřít',
 				closeWindow: 'Zavřít toto okno',
 				preview: 'Náhled',
-				previewError: 'Náhled se nepodařilo načíst. Možná problém s připojením nebo problém na serveru.',
+				previewError: 'Náhled se nepodařilo načíst. Možná se jedná o problém s připojením nebo nastal problém na serveru.',
 				ok: 'OK',
 				cancel: 'Zrušit',
 				save: 'Uložit',
-				saveAs: 'Uložit jako'
+				saveAs: 'Uložit jako',
+				open: 'Otevřít',
+				yes: 'Ano',
+				no: 'Ne'
 			};
 			
 			return this;
