@@ -5,7 +5,7 @@
  * 
  * @author		Jan Pecha, <janpecha@email.cz>
  * @license		see file license.txt
- * @version		2012-07-29-1
+ * @version		2012-09-27-1
  */
 
 ;(function($){
@@ -33,8 +33,6 @@
 					
 					var iframe = $.fn.tePreview_GetIframe(preview.get(0));
 					$(iframe).find('head').append('<style type="text/css">body {padding: 1em !important;}</style>').append(_cssFiles);
-					//preview.get(0).
-					//preview.contents().find('head').append(_cssFiles);
 				}
 			}
 			
@@ -42,7 +40,6 @@
 		},
 		
 		tePreview_GetIframe: function(iFrame) {
-			//var iFrame =  document.getElementById('id_description_iframe');
 			var iFrameDocument;
 			
 			if(iFrame.contentDocument) 
@@ -75,22 +72,15 @@
 						},
 						timeout: 10000,
 						success: function(data) {
-							//mywindow.children('iframe').html(data);
-							//mywindow.children('iframe').first().contents().find('body').html(data);
-							var iframe = $.fn.tePreview_GetIframe(mywindow.find('iframe').get(0));//.contents().find('body').html(data);
+							var iframe = $.fn.tePreview_GetIframe(mywindow.find('iframe').get(0));
 							$(iframe).find('body').html(data);
+							mywindow.data('texyed-preview-val', textareaValue);
 						},
 						error: function() {
-							//alert('Fatal error! Any connection problem.');
 							alert('Fatal error! ' + $.fn.texyedLang.previewError)
 							textarea.teCloseWindow('preview');
 						}
 					});
-//					$.post(mywindow.data('texyed-preview'), {
-//						text: textareaValue
-//					}, function(data, status, xhr) {
-//						mywindow.children('.ui-content').html(data);
-//					});
 				}
 			});
 			
