@@ -5,7 +5,7 @@
  * 
  * @author		Jan Pecha, <janpecha@email.cz>
  * @license		see file license.txt
- * @version		2012-07-29-1
+ * @version		2012-09-27-1
  */
 
 ;(function($){
@@ -41,6 +41,7 @@
 						timeout: 10000,
 						success: function(data) {
 							mywindow.children('.ui-content').html(data);
+							mywindow.data('texyed-preview-val', textareaValue);
 						},
 						error: function() {
 							//alert('Fatal error! Any connection problem.');
@@ -48,11 +49,6 @@
 							textarea.teCloseWindow('simple-preview');
 						}
 					});
-//					$.post(mywindow.data('texyed-preview'), {
-//						text: textareaValue
-//					}, function(data, status, xhr) {
-//						mywindow.children('.ui-content').html(data);
-//					});
 				}
 			});
 			
