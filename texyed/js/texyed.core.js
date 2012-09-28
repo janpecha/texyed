@@ -2,10 +2,12 @@
  * 
  * @author		Jan Pecha, <janpecha@email.cz>
  * @license		see file license.txt
- * @version		2012-09-28-1
+ * @version		2012-09-28-2
  */
 
-;(function($){
+;var texyed = texyed || {};
+
+(function($){
 	$.extend($.fn, {
 		texyed: function() {
 			if(!(this.hasClass('texyed-textarea')))
