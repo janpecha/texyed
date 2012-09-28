@@ -1,7 +1,7 @@
 /** Texyed - default themes
  * @author		Jan Pecha, <janpecha@email.cz>
  * @license		see file license.txt
- * @version		2012-09-27-1
+ * @version		2012-09-28-1
  */
 
 @import url('ui.buttons.css');
@@ -76,8 +76,8 @@
 }
 
 .texyed .ui-window .ui-content {
-	padding: 2.8em 1em 1em;
-	border-top: 1px solid transparent;
+	padding: 1em 1em;
+	border-top: 2.1em solid transparent;
 	overflow: auto;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
