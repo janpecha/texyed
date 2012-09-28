@@ -2,7 +2,7 @@
  * 
  * @author		Jan Pecha, <janpecha@email.cz>
  * @license		see file license.txt
- * @version		2012-07-28-1
+ * @version		2012-09-28-1
  */
 
 ;(function($){
@@ -18,7 +18,7 @@
 					+ '<div class="ui-content">'
 					+ content
 					+ '</div>'
-				+ '</div>');
+				+ '<div class="texyed-spinner"></div></div>');
 				
 				$('.ui-close', this.parent().children('.ui-window').last()).on('click', function(e) {
 					$(this).parent().parent().removeClass('ui-show');
