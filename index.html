@@ -60,7 +60,8 @@
 	<script type="text/javascript" src="texyed/js/texyed.toolbars.js"></script>
 	<script type="text/javascript" src="texyed/js/texyed.tab.js"></script>
 	<script type="text/javascript" src="texyed/js/texyed.autogrow.js"></script>
-	<script type="text/javascript" src="texyed/js/texyed.preview.iframe.js"></script>
+	<script type="text/javascript" src="texyed/js/texyed.preview.loader.js"></script>
+	<script type="text/javascript" src="texyed/js/texyed.preview.simple.js"></script>
 	<script type="text/javascript" src="texyed/langs/lang.cz.js"></script>
 	
 	<script type="text/javascript">
@@ -71,16 +72,16 @@
 			.teTab()
 			//.teAutogrow()
 			.teAddToolbar('main')
-			//.tePreviewSimple('preview.php')
-			.tePreviewIframe('preview.php', [
-				'css/typro.reset.css',
-				'css/typro.default.css',
-				'css/typro.visual.css',
-				'css/typro.color.a.css'
-			])
+			.tePreviewSimple('preview.php')
+			//.tePreviewIframe('preview.php', [
+			//	'css/typro.reset.css',
+			//	'css/typro.default.css',
+			//	'css/typro.visual.css',
+			//	'css/typro.color.a.css'
+			//])
 			.teAddAfterToolbar('buttonbar')
 			.teAddWindow('testWindow', 'Hello world!', '<h1>Big boss photo viewer!</h1>')
-			.teAddWindow('filemanager', 'File Manager', '<h1>Loading... Please wait.</h1>')
+			.teAddWindow('filemanager', 'File Manager', '<h1>Loading... Please wait.</h1><p>Dummy window</p>')
 			//.teShowWindow('filemanager')
 			//.teGetWindow('filemanager').children('.ui-content')
 			//.teAddButton('Save', function(){alert('Saving...');})
@@ -101,11 +102,12 @@
 				alert('Any action.');
 			})
 			
-			.teAddButton('Preview', function() {
+			.teAddButton('File Manager', function() {
 				texyed.teShowWindow('filemanager');
 			})
 			
-			.teAddPreviewButton('Náhled')
+			//.teAddPreviewIframeButton('Náhled')
+			.teAddPreviewSimpleButton('Náhled')
 			;
 		
 		texyed.teGetToolbar('buttonbar')
