@@ -5,7 +5,7 @@
  * 
  * @author		Jan Pecha, <janpecha@email.cz>
  * @license		see file license.txt
- * @version		2012-09-28-2
+ * @version		2012-09-28-3
  */
 
 ;(function($){
@@ -64,14 +64,18 @@
 				
 				if(mywindow.data('texyed-preview-val') != textareaValue)
 				{
+					mywindow.children('.texyed-spinner').first().css('display', 'block');
+					
 					$.fn.tePreviewLoader($, mywindow.data('texyed-preview'), textareaValue, {
 						success: function(data) {
+							mywindow.children('.texyed-spinner').first().css('display', 'none');
 							var iframe = $.fn.tePreviewIframe_GetIframe(mywindow.find('iframe').get(0));
 							$(iframe).find('body').html(data);
 							mywindow.data('texyed-preview-val', textareaValue);
 						},
 						error: function() {
 							textarea.teCloseWindow('preview');
+							mywindow.children('.texyed-spinner').first().css('display', 'none');
 						}
 					});
 				}
