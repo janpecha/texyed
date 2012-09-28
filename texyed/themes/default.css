@@ -1,7 +1,7 @@
 /** Texyed - default themes
  * @author		Jan Pecha, <janpecha@email.cz>
  * @license		see file license.txt
- * @version		2012-09-28-1
+ * @version		2012-09-28-2
  */
 
 @import url('ui.buttons.css');
@@ -36,7 +36,7 @@
 .texyed .ui-window {
 	width: 100%;
 	height: 100%;
-	overflow: none;
+	overflow: hidden;
 	background: rgba(20,20,20,0.95);
 	color: #fff;
 	position: absolute;
