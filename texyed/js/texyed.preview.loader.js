@@ -2,23 +2,21 @@
  * 
  * @author		Jan Pecha, <janpecha@email.cz>
  * @license		see file license.txt
- * @version		2012-09-28-1
+ * @version		2012-09-28-2
+ * @todo		2012-09-28 pokud je vracena odpoved ve formatu JSON a obsahuje klic 'error' s chybovou zpravou tak tuto zpravu zobrazit
  */
 
 ;
 var texyed = texyed || {};
 
-texyed.previewDefaultLoader = function($, previewUrl, previewText, options) {
+texyed.previewDefaultLoader = function($f, previewUrl, previewText, options) {
 	// Default options
 	var options = options || {};
 	options.timeout = options.timeout || 10000;
 	options.success = options.success || '';
 	options.error = options.error || '';
-	
-	var retData = '';
-	
 	// AJAX Request
-	$.ajax({
+	$f.ajax({
 		type: 'POST',
 		url: previewUrl,
 		data: {
@@ -26,8 +24,6 @@ texyed.previewDefaultLoader = function($, previewUrl, previewText, options) {
 		},
 		timeout: options.timeout,
 		success: function(data) {
-			retData = data;
-			
 			if(options.success !== '')
 			{
 				options.success(data);
@@ -35,7 +31,7 @@ texyed.previewDefaultLoader = function($, previewUrl, previewText, options) {
 		},
 		error: function() {
 			//alert('Fatal error! Any connection problem.');
-			alert($.fn.texyedLang.errorFatal + '! ' + $.fn.texyedLang.previewError);
+			alert($.fn.texyedLang.errorFatal + "!\n\n" + $.fn.texyedLang.previewError);
 			
 			if(options.error !== '')
 			{
@@ -43,9 +39,13 @@ texyed.previewDefaultLoader = function($, previewUrl, previewText, options) {
 			}
 		}
 	});
-	
-	return retData;
 }
+
+;(function($){
+	$.extend($.fn, {
+		tePreviewLoader: texyed.previewDefaultLoader
+	});
+})(('Zepto' in window) ? Zepto : jQuery);
 
 
 
