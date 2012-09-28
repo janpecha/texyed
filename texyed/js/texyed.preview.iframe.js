@@ -1,11 +1,11 @@
-/** Texyed - Preview module
+/** Texyed - Iframe Preview module
  * 
  * Require:
  *	- Buttons module
  * 
  * @author		Jan Pecha, <janpecha@email.cz>
  * @license		see file license.txt
- * @version		2012-09-28-1
+ * @version		2012-09-28-2
  */
 
 ;(function($){
@@ -31,7 +31,7 @@
 						_cssFiles += '<link rel="stylesheet" type="text/css" href="' + styleFiles[i] + '">';
 					}
 					
-					var iframe = $.fn.tePreview_GetIframe(preview.get(0));
+					var iframe = $.fn.tePreviewIframe_GetIframe(preview.get(0));
 					$(iframe).find('head').append('<style type="text/css">body {padding: 1em !important;}</style>').append(_cssFiles);
 				}
 			}
@@ -39,7 +39,7 @@
 			return this;
 		},
 		
-		tePreview_GetIframe: function(iFrame) {
+		tePreviewIframe_GetIframe: function(iFrame) {
 			var iFrameDocument;
 			
 			if(iFrame.contentDocument) 
@@ -54,7 +54,7 @@
 			return iFrameDocument;
 		},
 		
-		teAddPreviewButton: function(title) {
+		teAddPreviewIframeButton: function(title) {
 			this.teAddButton(title, function(e) {
 				var textarea = $(this).teGetTextarea();
 				var textareaValue = textarea.val();
@@ -64,20 +64,13 @@
 				
 				if(mywindow.data('texyed-preview-val') != textareaValue)
 				{
-					$.ajax({
-						type: 'POST',
-						url: mywindow.data('texyed-preview'),
-						data: {
-							text: textareaValue
-						},
-						timeout: 10000,
+					$.fn.tePreviewLoader($, mywindow.data('texyed-preview'), textareaValue, {
 						success: function(data) {
-							var iframe = $.fn.tePreview_GetIframe(mywindow.find('iframe').get(0));
+							var iframe = $.fn.tePreviewIframe_GetIframe(mywindow.find('iframe').get(0));
 							$(iframe).find('body').html(data);
 							mywindow.data('texyed-preview-val', textareaValue);
 						},
 						error: function() {
-							alert('Fatal error! ' + $.fn.texyedLang.previewError)
 							textarea.teCloseWindow('preview');
 						}
 					});
@@ -89,4 +82,5 @@
 	});
 
 })(('Zepto' in window) ? Zepto : jQuery);
+
 

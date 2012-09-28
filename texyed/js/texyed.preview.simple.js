@@ -5,7 +5,7 @@
  * 
  * @author		Jan Pecha, <janpecha@email.cz>
  * @license		see file license.txt
- * @version		2012-09-28-1
+ * @version		2012-09-28-2
  */
 
 ;(function($){
@@ -22,7 +22,7 @@
 			return this;
 		},
 		
-		teAddSimplePreviewButton: function(title) {
+		teAddPreviewSimpleButton: function(title) {
 			this.teAddButton(title, function(e) {
 				var textarea = $(this).teGetTextarea();
 				var textareaValue = textarea.val();
@@ -32,20 +32,12 @@
 				
 				if(mywindow.data('texyed-preview-val') != textareaValue)
 				{
-					$.ajax({
-						type: 'POST',
-						url: mywindow.data('texyed-preview'),
-						data: {
-							text: textareaValue
-						},
-						timeout: 10000,
+					$.fn.tePreviewLoader($, mywindow.data('texyed-preview'), textareaValue, {
 						success: function(data) {
 							mywindow.children('.ui-content').html(data);
 							mywindow.data('texyed-preview-val', textareaValue);
 						},
 						error: function() {
-							//alert('Fatal error! Any connection problem.');
-							alert('Fatal error! ' + $.fn.texyedLang.previewError)
 							textarea.teCloseWindow('simple-preview');
 						}
 					});
