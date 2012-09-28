@@ -2,7 +2,7 @@
  * 
  * @author		Jan Pecha, <janpecha@email.cz>
  * @license		see file license.txt
- * @version		2012-07-28-1
+ * @version		2012-09-28-1
  */
 
 ;(function($){
@@ -58,7 +58,12 @@
 			ok: 'OK',
 			cancel: 'Cancel',
 			save: 'Save',
-			saveAs: 'Save as'
+			saveAs: 'Save as',
+			open: 'Open',
+			yes: 'Yes',
+			no: 'No',
+			errorFatal: 'Fatal error',
+			error: 'Error'
 		}
 	})
 })(('Zepto' in window) ? Zepto : jQuery);

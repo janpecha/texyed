@@ -2,7 +2,7 @@
  * 
  * @author		Jan Pecha, <janpecha@email.cz>
  * @license		see file license.txt
- * @version		2012-08-18-1
+ * @version		2012-09-28-1
  */
 
 ;(function($){
@@ -19,7 +19,9 @@
 				saveAs: 'Uložit jako',
 				open: 'Otevřít',
 				yes: 'Ano',
-				no: 'Ne'
+				no: 'Ne',
+				errorFatal: 'Fatal error',
+				error: 'Chyba'
 			};
 			
 			return this;
