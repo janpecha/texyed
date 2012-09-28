@@ -5,12 +5,12 @@
  * 
  * @author		Jan Pecha, <janpecha@email.cz>
  * @license		see file license.txt
- * @version		2012-09-27-1
+ * @version		2012-09-28-1
  */
 
 ;(function($){
 	$.extend($.fn, {
-		tePreview: function(url, styleFiles) {
+		tePreviewIframe: function(url, styleFiles) {
 			if((this.hasClass('texyed-textarea')))
 			{
 				this.teAddWindow('preview', $.fn.texyedLang.preview/*'Preview'*/, '');
