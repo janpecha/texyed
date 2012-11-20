@@ -1,7 +1,7 @@
-/** Texyed - default themes
+/** Texyed - Default Theme
  * @author		Jan Pecha, <janpecha@email.cz>
- * @license		see file license.txt
- * @version		2012-09-28-2
+ * @license		see file license.md
+ * @version		2012-11-20-1
  */
 
 @import url('ui.buttons.css');
@@ -19,10 +19,26 @@
 /*	-moz-box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.6);*/
 	box-shadow: inset 0px 0px 5px 3px rgba(240, 240, 240, 1);
 /*	margin: 0 !important;*/
+/*	margin-right: 50%;*/
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100% !important;
+	resize: vertical;
+}
+
+.texyed-textarea.texyed-dual-view {
+	margin-right: 50% !important;
+	width: 50% !important;	
+}
+
+.texyed-main-wrapper {
+	position: relative;
+	z-index: 100;
 }
 
 .texyed {
-	background: #fff;
+	background: #f4f4f4;
 	position: relative;
 	margin-bottom: 1em;
 	overflow: hidden;
@@ -40,9 +56,14 @@
 	background: rgba(20,20,20,0.95);
 	color: #fff;
 	position: absolute;
-	left: 0;
+	right: 0;
 	top: 0;
 	display: none;
+	z-index: 200;
+}
+
+.texyed .ui-window.texyed-panel {
+	width: 50%;
 }
 
 .texyed .ui-window .ui-title {
@@ -76,7 +97,7 @@
 }
 
 .texyed .ui-window .ui-content {
-	padding: 1em 1em;
+	padding: 1em;
 	border-top: 2.1em solid transparent;
 	overflow: auto;
 	-webkit-box-sizing: border-box;
@@ -92,6 +113,22 @@
 
 .texyed .ui-window.ui-show {
 	display: block;
+}
+
+.texyed .ui-window.texyed-window-no-title .ui-title {
+	display: none;
+}
+
+.texyed .ui-window.texyed-window-no-title .ui-content {
+	border-top: none;
+}
+
+.texyed .ui-window.texyed-window-full-content .ui-content {
+	padding: 0;
+}
+
+.texyed .ui-window.texyed-window-no-scrollbars .ui-content {
+	overflow: hidden;
 }
 
 /* Spinner */

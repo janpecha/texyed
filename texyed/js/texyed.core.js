@@ -2,7 +2,7 @@
  * 
  * @author		Jan Pecha, <janpecha@email.cz>
  * @license		see file license.txt
- * @version		2012-10-20-1
+ * @version		2012-10-20-2
  */
 
 ;var texyed = texyed || {};
@@ -66,6 +66,17 @@
 		
 		teGetTextarea: function() {
 			return this.teGetTexyed().children('.texyed-main-wrapper').children('.texyed-textarea').first();
+		},
+		
+		teRefreshDualView: function() {
+			if(this.siblings('.ui-show').length)
+			{
+				return this.addClass('texyed-dual-view');
+			}
+			else
+			{
+				return this.removeClass('texyed-dual-view');
+			}
 		},
 		
 		texyedLang: {
