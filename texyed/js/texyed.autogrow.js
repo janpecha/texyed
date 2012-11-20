@@ -76,7 +76,8 @@
 						'overflow-x': 'hidden',
 						'position': 'absolute',
 						'top': 0,
-						'left': -9999
+						'left': -9999,
+						'box-sizing': obj.css('box-sizing')
 					}).appendTo('body');
 				}
 				
