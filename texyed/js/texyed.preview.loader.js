@@ -1,8 +1,8 @@
 /** Texyed - Default AJAX Preview Loader
  * 
  * @author		Jan Pecha, <janpecha@email.cz>
- * @license		see file license.txt
- * @version		2012-09-28-2
+ * @license		see file license.md
+ * @version		2012-11-20-1
  * @todo		2012-09-28 pokud je vracena odpoved ve formatu JSON a obsahuje klic 'error' s chybovou zpravou tak tuto zpravu zobrazit
  */
 

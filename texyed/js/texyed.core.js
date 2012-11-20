@@ -1,8 +1,8 @@
 /** Texyed - Core module
  * 
  * @author		Jan Pecha, <janpecha@email.cz>
- * @license		see file license.txt
- * @version		2012-10-20-2
+ * @license		see file license.md
+ * @version		2012-11-20-3
  */
 
 ;var texyed = texyed || {};

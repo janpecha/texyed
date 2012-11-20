@@ -1,8 +1,8 @@
 /** Texyed - Toolbars module
  * 
  * @author		Jan Pecha, <janpecha@email.cz>
- * @license		see file license.txt
- * @version		2012-11-20-1
+ * @license		see file license.md
+ * @version		2012-11-20-2
  */
 
 ;(function($){
