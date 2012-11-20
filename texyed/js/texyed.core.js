@@ -2,7 +2,7 @@
  * 
  * @author		Jan Pecha, <janpecha@email.cz>
  * @license		see file license.txt
- * @version		2012-09-28-2
+ * @version		2012-10-20-1
  */
 
 ;var texyed = texyed || {};
@@ -12,11 +12,27 @@
 		texyed: function() {
 			if(!(this.hasClass('texyed-textarea')))
 			{
+				/*
+					.texyed
+						.texyed-before-wrapper
+							= toolbars, buttons, ...
+						.texyed-main-wrapper [.texyed-dual-view]
+							.texyed-textarea
+							= panels
+						= windows
+						.texyed-after-wrapper
+							= toolbars, buttons, ...
+				*/
 				this.addClass('texyed-textarea')
-					.wrap('<div class="texyed"></div>');
+					.wrap('<div class="texyed"></div>')
+					.wrap('<div class="texyed-main-wrapper"></div>');
+					
+				parent = this.parent().first();
+				parent.before('<div class="texyed-before-wrapper"></div>');
+				parent.after('<div class="texyed-after-wrapper"></div>');
 				
 				// Copy style
-				var texyed = this.parent();
+				var texyed = this.parent().parent();
 				// Size
 				if(typeof Zepto !== 'undefined')
 				{
@@ -49,7 +65,7 @@
 		},
 		
 		teGetTextarea: function() {
-			return this.teGetTexyed().children('.texyed-textarea').first();
+			return this.teGetTexyed().children('.texyed-main-wrapper').children('.texyed-textarea').first();
 		},
 		
 		texyedLang: {

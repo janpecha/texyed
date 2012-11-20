@@ -2,7 +2,7 @@
  * 
  * @author		Jan Pecha, <janpecha@email.cz>
  * @license		see file license.txt
- * @version		2012-09-28-1
+ * @version		2012-11-20-1
  */
 
 ;(function($){
@@ -10,19 +10,36 @@
 		teAddWindow: function(name, title, content) {
 			if(this.hasClass('texyed-textarea'))
 			{
-				this.before('<div class="ui-window" data-texyed-window="' + name + '">'
-					+ '<div class="ui-title">'
+//				this.parent().after('<div class="ui-window ' + (dualView ? ' texyed-dual-view' : '') + '" data-texyed-window="' + name + '">'
+//					+ '<div class="ui-title">'
+//						+ title
+//						+ ' <span class="ui-close" title="' + $.fn.texyedLang.closeWindow/*Close this window*/ + '">&#10006;</span>'
+//					+ '</div>'
+//					+ '<div class="ui-content">'
+//					+ content
+//					+ '</div>'
+//				+ '</div>');
+			
+				var mywindow = $('<div class="ui-window" data-texyed-window="' + name + '"></div>')
+					.append('<div class="ui-title">'
 						+ title
-						+ ' <span class="ui-close" title="' + $.fn.texyedLang.closeWindow/*Close this window*/ + '">&#10006;</span>'
-					+ '</div>'
-					+ '<div class="ui-content">'
-					+ content
-					+ '</div>'
-				+ '<div class="texyed-spinner"></div></div>');
+						+ ' </div>'
+						+ '<div class="ui-content">'
+						+ content
+						+ '</div>'
+						+ '<div class="texyed-spinner"></div>');
 				
-				$('.ui-close', this.parent().children('.ui-window').last()).on('click', function(e) {
+				var close = $('<span class="ui-close" title="' + $.fn.texyedLang.closeWindow/*Close this window*/ + '">&#10006;</span>').on('click', function(e) {
 					$(this).parent().parent().removeClass('ui-show');
-				})
+				});
+				
+				$('.ui-title', mywindow).append(close);
+				
+				this.parent().after(mywindow);
+				
+//				$('.ui-close', this.parent().children('.ui-window').first()).on('click', function(e) {
+//					$(this).parent().parent().removeClass('ui-show');
+//				})
 			}
 			
 			return this;
@@ -59,7 +76,7 @@
 		teGetWindow: function(name) {
 			mywindow = '';
 			
-			this.parent().children('.ui-window').each(function(index, item) {
+			this.parent().parent().children('.ui-window').each(function(index, item) {
 				var _this = $(this);
 				if(_this.data('texyed-window') == name)
 				{
