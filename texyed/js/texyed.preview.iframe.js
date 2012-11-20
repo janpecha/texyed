@@ -5,21 +5,76 @@
  * 
  * @author		Jan Pecha, <janpecha@email.cz>
  * @license		see file license.txt
- * @version		2012-09-28-3
+ * @version		2012-11-20-1
  */
 
 ;(function($){
 	$.extend($.fn, {
-		tePreviewIframe: function(url, styleFiles) {
+		tePreviewIframe: function(url, styleFiles, paneled, noTitle, opened) {
 			if((this.hasClass('texyed-textarea')))
 			{
-				this.teAddWindow('preview', $.fn.texyedLang.preview/*'Preview'*/, '');
+				paneled = paneled || false;
+				noTitle = noTitle || false;
+				opened = opened || false;
+				properties = [];
+				
+				if(paneled)
+				{
+					properties.push('texyed-window-full-content');
+					properties.push('texyed-window-no-scrollbars');
+					
+					var timeoutId;
+					
+					this.on('keyup', function(e) {
+						clearTimeout(timeoutId);
+						var _this = this;
+						
+						timeoutId = setTimeout(function() {
+							var textarea = $(_this).teGetTextarea();
+							var textareaValue = textarea.val();
+							var mywindow = textarea.teGetWindow('preview');
+				
+							textarea.teShowWindow('preview');
+				
+							if(mywindow.data('texyed-preview-val') != textareaValue)
+							{
+								mywindow.children('.texyed-spinner').first().css('display', 'block');
+					
+								$.fn.tePreviewLoader($, mywindow.data('texyed-preview'), textareaValue, {
+									success: function(data) {
+										mywindow.children('.texyed-spinner').first().css('display', 'none');
+										var iframe = $.fn.tePreviewIframe_GetIframe(mywindow.find('iframe').get(0));
+										$(iframe).find('body').html(data);
+										mywindow.data('texyed-preview-val', textareaValue);
+									},
+									error: function() {
+										textarea.teCloseWindow('preview');
+										mywindow.children('.texyed-spinner').first().css('display', 'none');
+									}
+								});
+							}
+						}, 400);
+					});
+				}
+				
+				if(noTitle)
+				{
+					properties.push('texyed-window-no-title');
+				}
+				
+				if(opened)
+				{
+					properties.push('ui-show');
+				}
+				
+				this.teAddWindow('preview', $.fn.texyedLang.preview/*'Preview'*/, '', paneled, properties);
 				var mywindow = this.teGetWindow('preview')
 					.data('texyed-preview', url)
-					.data('texyed-preview-val', '');
+					.data('texyed-preview-val', '')
 				
-				var preview = $('<iframe class="texyed-preview"></iframe>')
-					.appendTo(mywindow.children('.ui-content').first());
+				var content = mywindow.children('.ui-content').first();
+				var preview = $('<iframe class="texyed-preview" style="box-sizing:border-box"></iframe>')
+					.appendTo(content);
 					
 				// nastavi CSS soubory pro preview iframe
 				if(typeof(styleFiles) === 'object' && (styleFiles instanceof Array))	// is array
